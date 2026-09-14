@@ -37,26 +37,39 @@
 </script>
 
 <template>
-    
-    <!-- Add/Modify code here -->
-    <!-- note: need to use single quotes '' for classes such as btn-primary which contains '-' signs
-                because '-' is a minus operator for (Vue) JavaScript  -->
     <div id="part1">
-        <div>
-            div ID : {{id}} 
+        <div
+            id="demo"
+            :class="{ blueBox: blueBox, redBox: !blueBox }"
+        >
+            div ID : {{ id }}
         </div>
-        
-        <button type="button" v-on:click="changeColor">Change Color</button>
+
+        <button
+            type="button"
+            :class="{ 'btn-primary': blueBtn, 'btn-danger': !blueBtn }"
+            v-on:click="changeColor"
+        >
+            Change Color
+        </button>
     </div>
 
     <div id="part2">
-        <div>
-            div ID : {{id}} 
+        <div
+            id="demo"
+            :style="{ color: activeColor }"
+        >
+            div ID : {{ id }}2
         </div>
-       
-        <button type="button" v-on:click="changeTextColor">Change Text Color</button> 
-    </div>
 
+        <button
+            type="button"
+            :class="{ 'btn-danger': redBtn, 'btn-primary': !redBtn }"
+            v-on:click="changeTextColor"
+        >
+            Change Text Color
+        </button>
+    </div>
 </template>
 
 <style scoped>
