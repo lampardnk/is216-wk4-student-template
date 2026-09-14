@@ -1,9 +1,9 @@
 <script setup>
     import { ref } from 'vue'
 
-    // Add code here
     // part 1
     const id = ref('demo')
+    const id2 = ref('demo2')
     const blueBox = ref(true)
     const blueBtn = ref(true)
 
@@ -56,10 +56,10 @@
 
     <div id="part2">
         <div
-            id="demo"
+            :id="id2"
             :style="{ color: activeColor }"
         >
-            div ID : {{ id }}2
+            div ID : {{ id2 }}
         </div>
 
         <button

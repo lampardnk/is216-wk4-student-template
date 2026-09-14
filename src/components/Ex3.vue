@@ -7,7 +7,7 @@
 <template>
     <h1>Please select your login option</h1>
     <select v-model="loginOption">
-        <option value="username">Username login</option>
+        <option selected value="username">Username login</option>
         <option value="email">Email login</option>
     </select>
 
@@ -17,7 +17,7 @@
     </div>
     <div v-else>
         <label>Email</label>
-        <input type="email" placeholder="Enter your email">
+        <input placeholder="Enter your email address">
     </div>
 </template>
 
